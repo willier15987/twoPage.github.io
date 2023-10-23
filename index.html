@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function redirectToAppropriateURL() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            if (userAgent.indexOf('android') > -1) {
+                // Android设备
+                window.location.href = 'https://www.google.com.tw/';
+            } else if (userAgent.indexOf('iphone') > -1 || userAgent.indexOf('ipad') > -1) {
+                // iOS设备
+                window.location.href = 'https://www.youtube.com/?gl=TW';
+            } else {
+                // 默认情况，可以是通用URL或其他处理方式
+                window.location.href = 'https://www.facebook.com/';
+            }
+        }
+    </script>
+</head>
+<body onload="redirectToAppropriateURL()">
+</body>
+</html>
